@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+a:link,
+a:visited {
+    color: var(--accent-color);
+}
+
+/* Global styles for mobile screens */
+body {
+    font-family: 'Roboto', Arial, Helvetica,sans-serif;
+    font-size: 18px; /* Increased font size */
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Header and footer styles */
+header, footer {
+    background-color: #52489c; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Bold', 'Arial Black', Impact, sans-serif;
+    color: #000;
+}
+
+/* Link styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.gallery {
+    display: grid;
+}
+
+img {
+	max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #menu-button {
+        display: none;
+    }
+}
