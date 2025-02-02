@@ -12,44 +12,46 @@
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
+    margin: 0;
 }
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    color: var(--text-light);
+    text-decoration: underline;
+    margin: 40px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
 a:link,
 a:visited {
     color: var(--accent-color);
 }
 
-/* Global styles for mobile screens */
-body {
-    font-family: 'Roboto', Arial, Helvetica,sans-serif;
-    font-size: 18px; /* Increased font size */
-    line-height: 1.5;
-    color: #333;
-}
-
-/* Header and footer styles */
-header, footer {
-    background-color: #52489c; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Bold', 'Arial Black', Impact, sans-serif;
-    color: #000;
-}
-
-/* Link styles */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 .gallery {
     display: grid;
+    grid-template-columns: 1fr;
+}
+
+figure {
+    margin: 0 auto;
 }
 
 img {
@@ -59,7 +61,16 @@ img {
     object-fit: cover;
 }
 
-@media screen and (min-width: 700px) {
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 360px) {
+    a {
+        display: block;
+        margin: 20px 0px 20px 0px;
+    }
+
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
@@ -70,7 +81,7 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    #menu-button {
-        display: none;
+    button {
+        display: None;
     }
 }
