@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 :root {
 --primary-color: #52489c;
 --secondary-color: #59c3c3;
 --accent-color: #f45b69;
 --text-dark: #333;
 --text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: Mooli, san-serif;
+--primary-font: Arial, Helvetica, sans-serif;
+--secondary-font: Mooli, sans-serif;
 }
 
 body {
@@ -30,10 +30,22 @@ nav {
     text-align: center;
 }
 
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    justify-content:space-around;
+}
+
 a {
     color: var(--text-light);
     text-decoration: underline;
     margin: 40px;
+    display: block;
+    margin: 20px 0px 20px 0px;
 }
 
 a:hover {
@@ -45,9 +57,28 @@ a:visited {
     color: var(--accent-color);
 }
 
+.viewer {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.close-viewer {
+    display: block;
+    text-align: right;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 2em;
 }
 
 figure {
@@ -65,11 +96,18 @@ footer p {
     margin: 0;
 }
 
-@media screen and (max-width: 360px) {
-    a {
-        display: block;
-        margin: 20px 0px 20px 0px;
-    }
+.menu-button {
+    all: unset;
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 820px) {
 
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -81,7 +119,11 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    button {
-        display: None;
+    .menu-button {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
     }
 }
