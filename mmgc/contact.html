@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Child page to allow anyone interested to contact us" />
+        <meta name="author" content="Aidan Rodriguez" />
+        <title>Contact Us - MMGC</title>
+        <link rel="stylesheet" href="styles/mmgc.css" />
+        <link rel="icon" href="images/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+        <script src="scripts/mmgc.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">MMGC</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn">Send Message</button>
+                </form>
+                <p id="formFeedback"></p>
+            </section>
+            <section class="map">
+                <h3>Our Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.508487128839!2d-111.78507968450107!3d43.81850197911568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540a0b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sBrigham%20Young%20University-Idaho!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+        <footer>
+            <p>Final Project &copy; 2024 - Aidan Rodriguez</p>
+            <a href="index.html" class="contact-btn">Back to Home</a>
+        </footer>
+        <script src="script.js"></script>
+        <!-- Link to the external JS file -->
+    </body>
+</html>
