@@ -1,6 +1,6 @@
 const menuButton = document.querySelector(".menu-button");
 function toggleMenu() {
-const menu = document.querySelector(".menu");
+const menu = document.querySelector("");
 menu.classList.toggle("hide");
 }
 
